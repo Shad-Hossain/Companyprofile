@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Welcome — Business Profile | Jamuna Logistics · JP Express · Upex World BD · Dreams On</title>
+	<meta name="description"
+		content="Business profile for Jamuna Logistics, JP Express, Upex World BD and Dreams On Corporation. Logistics, courier, shipping and development services." />
+
+	<style>
+		/* ---------- Variables ---------- */
+		:root {
+			--navy: #0b2545;
+			--gold: gold;
+			--muted: #667085;
+			--white: #ffffff;
+			--page-bg: #ffffff;
+			--card: #f7f9fb;
+			--radius: 12px;
+			--maxw: 1100px;
+			--shadow: 0 6px 30px rgba(11, 37, 69, 0.08);
+		}
+
+		* {
+			box-sizing: border-box
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		body {
+			margin: 0;
+			font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+			background: var(--page-bg);
+			color: #0f1724;
+			line-height: 1.5;
+		}
+
+		a {
+			color: inherit;
+			text-decoration: none
+		}
+
+		img {
+			max-width: 100%;
+			display: block;
+			border-radius: 8px
+		}
+
+		.wrap {
+			max-width: var(--maxw);
+			margin: 0 auto;
+			padding: 24px;
+		}
+
+		/* ---------- Navbar ---------- */
+		nav.topnav {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 64px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0 20px;
+			background: var(--white);
+			border-bottom: 1px solid rgba(11, 37, 69, 0.08);
+			z-index: 1000;
+			box-shadow: 0 3px 8px rgba(10, 20, 40, 0.04);
+		}
+
+		.brand {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+		}
+
+		.brand .logo {
+			width: 44px;
+			height: 44px;
+			border-radius: 10px;
+			background: var(--navy);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: var(--white);
+			font-weight: 700;
+			font-size: 18px;
+		}
+
+		.brand h1 {
+			font-size: 16px;
+			margin: 0;
+			color: var(--navy);
+		}
+
+		.brand p {
+			margin: 0;
+			font-size: 12px;
+			color: var(--muted)
+		}
+
+		.nav-links {
+			display: flex;
+			gap: 18px;
+			align-items: center;
+			list-style: none;
+		}
+
+		.nav-links li a {
+			color: var(--navy);
+			font-weight: 600;
+			padding: 8px 10px;
+			border-radius: 8px;
+		}
+
+		.nav-links li a:hover {
+			color: var(--gold)
+		}
+
+		.cta {
+			border: 2px solid var(--gold);
+			color: var(--navy);
+			padding: 8px 14px;
+			border-radius: 9px;
+			font-weight: 700;
+		}
+
+		/* Hamburger */
+		.hamburger {
+			display: none;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 24px;
+			height: 18px;
+			cursor: pointer;
+		}
+
+		.hamburger span {
+			height: 3px;
+			width: 100%;
+			background: var(--navy);
+			border-radius: 3px;
+		}
+
+		/* Mobile menu */
+		.mobile-menu {
+			display: none;
+			flex-direction: column;
+			background: var(--white);
+			position: absolute;
+			top: 64px;
+			left: 0;
+			right: 0;
+			border-top: 1px solid rgba(11, 37, 69, 0.08);
+			z-index: 999;
+		}
+
+		.mobile-menu li {
+			list-style: none;
+			text-align: center;
+			padding: 14px 0;
+		}
+
+		.mobile-menu li a {
+			color: var(--navy);
+			font-weight: 600;
+		}
+
+		/* ---------- Hero ---------- */
+		.hero {
+			margin-top: 64px;
+			position: relative;
+			border-radius: 14px;
+			overflow: hidden;
+			box-shadow: var(--shadow);
+		}
+
+		.hero .bg {
+			width: 100%;
+			height: 420px;
+			object-fit: cover;
+			filter: brightness(.6) contrast(1.03);
+			display: block;
+		}
+
+		.hero .overlay {
+			position: absolute;
+			inset: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			padding: 40px;
+		}
+
+		.hero h2 {
+			color: var(--gold);
+			font-size: 32px;
+			line-height: 1.05;
+			margin-bottom: 12px;
+			text-shadow: 0 6px 18px rgba(11, 37, 69, 0.5);
+		}
+
+		.hero p {
+			color: #fff;
+			font-size: 16px;
+			max-width: 800px;
+			margin: 0 auto 18px;
+		}
+
+		.hero .down {
+			display: inline-block;
+			margin-top: 12px;
+			padding: 10px 16px;
+			border-radius: 999px;
+			border: 2px solid rgba(255, 255, 255, 0.18);
+			color: var(--white);
+			font-weight: 700;
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+		}
+
+		/* ---------- Sections ---------- */
+		section {
+			background: var(--card);
+			border-radius: 12px;
+			padding: 26px;
+			margin: 28px 0;
+			box-shadow: var(--shadow);
+		}
+
+		.section-title {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 12px;
+			margin-bottom: 14px;
+		}
+
+		.section-title h3 {
+			margin: 0;
+			color: var(--navy);
+			font-size: 20px;
+		}
+
+		.core-values {
+			display: flex;
+			gap: 14px;
+			margin-top: 12px;
+			flex-wrap: wrap
+		}
+
+		.value {
+			background: white;
+			border-radius: 10px;
+			padding: 12px;
+			min-width: 180px;
+			flex: 1;
+			box-shadow: 0 6px 20px rgba(11, 37, 69, 0.05);
+		}
+
+		.value h4 {
+			margin: 0 0 6px 0;
+			color: var(--navy)
+		}
+
+		.company {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 18px;
+			align-items: start;
+		}
+
+		.company .info {
+			padding: 6px 0
+		}
+
+		.company h4 {
+			margin: 6px 0;
+			color: var(--navy)
+		}
+
+		.muted {
+			color: var(--muted)
+		}
+
+		/* Contact card */
+		.contact-card {
+			display: flex;
+			gap: 18px;
+			align-items: center;
+			padding: 12px;
+			border-radius: 10px;
+			background: linear-gradient(180deg, #ffffff, #fbfbfb)
+		}
+
+		.contact-card .left {
+			flex: 1
+		}
+
+		.contact-card .right {
+			text-align: right
+		}
+
+		.contact-card a {
+			color: var(--navy);
+			font-weight: 700
+		}
+
+		/* Footer */
+		footer.sitefoot {
+			margin-top: 32px;
+			padding: 20px;
+			background: var(--navy);
+			color: var(--white);
+			border-radius: 10px;
+			text-align: center;
+		}
+
+		footer a {
+			color: var(--gold)
+		}
+		#dreams{
+			height : 350px;
+			width:550px;
+		}
+
+		/* ---------- Responsive ---------- */
+		@media(max-width:768px) {
+			.nav-links {
+				display: none;
+			}
+
+			.hamburger {
+				display: flex;
+			}
+
+			.company {
+				grid-template-columns: 1fr
+			}
+
+			.hero .bg {
+				height: 320px
+			}
+
+			.hero h2 {
+				font-size: 26px
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- NAVBAR -->
+	<nav class="topnav">
+		<div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
+			<div class="brand">
+				<div class="logo">S.H</div>
+				<div>
+					<h1>Business Profile</h1>
+					<p class="muted">Jamuna · JP Express · Upex World · Dreams On</p>
+				</div>
+			</div>
+
+			<ul class="nav-links">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About Us</a></li>
+				<li><a href="#mission">Mission</a></li>
+				<li><a href="#contact" class="cta">Contact Us</a></li>
+			</ul>
+
+			<div class="hamburger" id="hamburger" aria-label="Toggle menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</nav>
+
+	<!-- MOBILE MENU -->
+	<ul class="mobile-menu" id="mobileMenu">
+		<li><a href="#home">Home</a></li>
+		<li><a href="#about">About Us</a></li>
+		<li><a href="#mission">Mission</a></li>
+		<li><a href="#contact">Contact Us</a></li>
+	</ul>
+
+	<main class="wrap" id="home">
+
+		<!-- HERO -->
+		<section class="hero" aria-labelledby="hero-title">
+			<img class="bg" src="herobg.jpg"
+				alt="Logistics hub and containers" />
+			<div class="overlay">
+				<div>
+					<h2 id="hero-title">Welcome to Our Business Profile</h2> <br><br>
+					<p>We operate across customs clearing & forwarding, international courier & freight,
+						import & supply, and development — delivering reliability, speed and integrity
+						for businesses in Bangladesh and beyond.</p>
+					<a class="down" href="#about">Scroll down ↓</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Home / Core Values -->
+		<section>
+			<div class="section-title">
+				<h3>Home — Mission, Vision & Core Values</h3>
+			</div>
+			<div style="display:flex; gap:20px; align-items:center; flex-wrap:wrap;">
+				<div style="flex:1; min-width:280px;">
+					<h4>Overall Mission</h4>
+					<p class="muted">To deliver integrated trade, logistics, and supply solutions that
+						connect Bangladesh with the global market through efficiency, transparency,
+						and innovation — ensuring every client experiences reliability,
+						professionalism, and trust in every service we provide.</p>
+
+					<h4 style="margin-top:12px;">Overall Vision</h4>
+					<p class="muted">To be a multi-sector leader recognized for excellence in logistics,
+						trade facilitation, and development — driving national growth through
+						integrity, innovation, and customer satisfaction.</p>
+				</div>
+				<div style="flex:1; min-width:260px;">
+					<h4>Core Values</h4>
+					<div class="core-values">
+						<div class="value">
+							<h4>Integrity</h4>
+							<p class="muted">Transparent processes & ethical conduct across
+								operations.</p>
+						</div>
+						<div class="value">
+							<h4>Reliability</h4>
+							<p class="muted">On-time deliveries and predictable services.</p>
+						</div>
+						<div class="value">
+							<h4>Customer-first</h4>
+							<p class="muted">Solutions tailored to client needs.</p>
+						</div>
+						<div class="value">
+							<h4>Innovation</h4>
+							<p class="muted">Continuous improvement and tech-enabled services.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ABOUT US -->
+		<section id="about">
+			<div class="section-title">
+				<h3>About Us — Individual Company Details</h3>
+			</div>
+
+			<!-- Jamuna -->
+			<div class="company">
+				<div><img src="customs.jpg"
+						alt="Customs, warehouse and trucks - C&F operations"></div>
+				<div class="info">
+					<h4>Jamuna Logistics Limited</h4>
+					<p class="muted"><strong>Type:</strong> Customs Clearing & Forwarding Agent</p>
+					<p class="muted">Handles customs clearance, import/export documentation, port
+						coordination and freight forwarding with a focus on compliance and speed.</p>
+					<p><strong>Mission:</strong> Reliable customs clearance and end-to-end forwarding
+						solutions.<br><strong>Vision:</strong> To be Bangladesh’s most trusted C&F
+						partner.</p>
+				</div>
+			</div>
+
+			<!-- JP Express -->
+			<div class="company" style="margin-top:18px">
+				<div><img src="customs.jpg"
+						alt="Courier processing and parcel sorting center"></div>
+				<div class="info">
+					<h4>JP Express Limited</h4>
+					<p class="muted"><strong>Type:</strong> Customs Clearing & Forwarding Agent</p>
+					<p class="muted">Focuses on fast and secure shipments, express customs processing,
+						last-mile coordination and reliable tracking.</p>
+					<p><strong>Mission:</strong> Fast, accurate, and trustworthy express
+						solutions.<br><strong>Vision:</strong> To set benchmark standards in regional
+						express services.</p>
+				</div>
+			</div>
+
+			<!-- Upex -->
+			<div class="company" style="margin-top:18px">
+				<div><img  src="currier.jpeg"
+						alt="Airplane and container ship illustrating international courier and freight">
+				</div>
+				<div class="info">
+					<h4>Upex World BD Limited</h4>
+					<p class="muted"><strong>Type:</strong> International Courier & Freight</p>
+					<p class="muted">Connects Bangladesh to global markets via air & sea freight, express
+						courier and e-commerce shipping solutions.</p>
+					<p><strong>Mission:</strong> Seamless global connectivity for businesses and
+						individuals.<br><strong>Vision:</strong> To become Bangladesh’s leading
+						international courier brand.</p>
+				</div>
+			</div>
+
+			<!-- Dreams On -->
+			<div class="company" style="margin-top:18px">
+				<div><img id="dreams" src="dreams.jpg"
+						alt="Construction site and imports for development projects"></div>
+				<div class="info">
+					<h4>Dreams On Corporation</h4>
+					<p class="muted"><strong>Type:</strong> Importer, Supplier & Developer</p>
+					<p class="muted">Supplies industrial equipment, consumer goods and supports
+						development projects.</p>
+					<p><strong>Mission:</strong> High-quality products and project
+						delivery.<br><strong>Vision:</strong> Trusted diversified business driving
+						growth.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- MISSION -->
+		<section id="mission">
+			<div class="section-title">
+				<h3>Overall Mission and Vision</h3>
+			</div>
+			<p class="muted"><strong>Overall Mission:</strong> Deliver integrated trade, logistics and supply
+				solutions enabling cross-border business with compliance, speed and customer focus.</p>
+			<p class="muted" style="margin-top:12px"><strong>Overall Vision:</strong> Become a multi-sector
+				exemplar in Bangladesh — recognized internationally for excellence and ethical practices.
+			</p>
+		</section>
+
+		<!-- CONTACT -->
+		<section id="contact">
+			<div class="section-title">
+				<h3>Contact Us</h3>
+			</div>
+			<div class="contact-card">
+				<div class="left">
+					<p class="muted"><strong>Address:</strong><br>House: 04, Road: 05, Sector: 01,
+						Uttara, Dhaka 1230</p>
+					<p class="muted" style="margin-top:8px;"><strong>Phone:</strong><br>+88-02224471099
+					</p>
+					<p class="muted" style="margin-top:8px;"><strong>Website:</strong><br><a
+							href="https://upexworldbd.com" target="_blank"
+							rel="noopener">upexworldbd.com</a></p>
+				</div>
+				<div class="right">
+					<p class="muted">For service inquiries & partnerships</p>
+					<p style="font-weight:800; color:var(--navy); margin-top:6px">Call: +88-02224471099
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- FOOTER -->
+		<footer class="sitefoot">
+			<div class="wrap" style="display:flex;flex-direction:column;gap:8px;align-items:center;">
+				<div>&copy; 2025 Jamuna Logistics · JP Express · Upex World BD · Dreams On Corporation | All
+					rights reserved</div>
+			</div>
+		</footer>
+
+	</main>
+
+	<script>
+		const hamburger = document.getElementById('hamburger');
+		const mobileMenu = document.getElementById('mobileMenu');
+
+		hamburger.addEventListener('click', () => {
+			mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
+		});
+
+		const links = mobileMenu.querySelectorAll('a');
+		links.forEach(link => {
+			link.addEventListener('click', () => {
+				mobileMenu.style.display = 'none';
+			});
+		});
+	</script>
+</body>
+
+</html>
